@@ -1,7 +1,8 @@
 #! / usr / bin / env python3 
 import ev3dev.ev3 as ev3
-import  * from ev3dev.ev3  
-#coding : utf-8
+from ev3dev.ev3  import  *
+# coding: utf-8
+
 
 cl = colorSENSOR () #définir le capteur comme capteur de couleur
 assert cl.connected, "Connecter un capteur de couleur à un port de capteur" #vérifier que le capteur est connecté sinon erreur
@@ -12,4 +13,4 @@ if colors = "rouge":
 	pass
 else :
 	print(colors[cl.value()]) #affiche la couleur en chaine de caractère
-    	Sound.speak(colors[cl.value()]).wait() #dit la couleur
+    Sound.speak(colors[cl.value()]).wait() #dit la couleur
